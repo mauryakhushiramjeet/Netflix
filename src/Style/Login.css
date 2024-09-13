@@ -1,0 +1,64 @@
+@media (max-width:465px) {
+    .head{
+        padding-bottom: 14px;
+        padding-top: 14px;
+
+    }
+    .form{
+        width: 75%;
+    }
+    .para{
+        font-size: 15px;
+    }
+    .btn{
+padding-top: 12px;
+padding-bottom: 12px;
+    }
+    .btn1{
+        padding-top: 12px;
+        padding-bottom: 12px; 
+    }
+    .btn2{
+        padding-top: 12px;
+        padding-bottom: 12px;    
+    }
+}
+@media (max-width:300px) {
+    .form{
+        width: 80%;
+        padding: 10px;
+    }
+    .btn{
+padding-top: 12px;
+padding-bottom: 12px;
+    }
+    .btn1{
+        padding-top: 12px;
+        padding-bottom: 12px; 
+    }
+    .btn2{
+        padding-top: 12px;
+        padding-bottom: 12px;    
+    }
+}
+@media (max-width:270px) {
+    .form{
+        width: 90%;
+        padding: 7px;
+    }
+    .para{
+        font-size: 12px;
+    }
+    .btn{
+padding-top: 12px;
+padding-bottom: 12px;
+    }
+    .btn1{
+        padding-top: 12px;
+        padding-bottom: 12px; 
+    }
+    .btn2{
+        padding-top: 12px;
+        padding-bottom: 12px;    
+    }
+}
