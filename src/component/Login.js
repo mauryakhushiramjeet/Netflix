@@ -8,10 +8,10 @@ import {
 import { auth } from "../utils/Firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import "../Style/Login.css"
+import "../Style/Login.css";
 
 const Login = () => {
-  const dispath = useDispatch();
+  const dispatch = useDispatch();
   const [errorMessage, setErrorMessage] = useState(null);
   const email = useRef(null);
   const password = useRef(null);
@@ -39,14 +39,14 @@ const Login = () => {
           // Signed up
           const user = userCredential.user;
           updateProfile(user, {
-            displayName: name.current.valu,
+            displayName: name.current.value,
             photoURL:
               "https://lh3.googleusercontent.com/a/ACg8ocIn8_xFynCmHpiFenodN4yhJ6hPLrDAAA3JISqVd30AahcP_rsI=s360-c-no",
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
 
-              dispath(
+              dispatch(
                 addUser({
                   uid: uid,
                   email: email,
@@ -125,12 +125,12 @@ const Login = () => {
             />
             <p className="text-red-700 font-bold">{errorMessage}</p>
             <button
-              className= " btn p-4 mt-6 mb-2 w-full bg-red-700"
+              className=" btn p-4 mt-6 mb-2 w-full bg-red-700"
               onClick={handelButtonClick}
             >
               {isSignInForm ? "Sign In" : "Sign Up"}
             </button>
-         {/* <div className="">
+            {/* <div className="">
          <span className="text-gray-400 remmember">Remmeber me</span>
          <span className=" need ml-20 text-gray-400"> Need help?</span>
          </div> */}

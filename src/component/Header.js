@@ -18,13 +18,13 @@ const Header = () => {
         // Sign-out successful.
       })
       .catch((error) => {
-        navigate("/error")
+        navigate("/error");
       });
   };
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        const { uid, email, displayName, photoURL } = auth.currentUser;
+        const { uid, email, displayName, photoURL } = user;
         dispatch(
           addUser({
             uid: uid,
