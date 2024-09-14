@@ -9,8 +9,11 @@ import { auth } from "../utils/Firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 import "../Style/Login.css";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const dispatch = useDispatch();
   const [errorMessage, setErrorMessage] = useState(null);
   const email = useRef(null);
@@ -44,6 +47,7 @@ const Login = () => {
               "https://lh3.googleusercontent.com/a/ACg8ocIn8_xFynCmHpiFenodN4yhJ6hPLrDAAA3JISqVd30AahcP_rsI=s360-c-no",
           })
             .then(() => {
+
               const { uid, email, displayName, photoURL } = auth.currentUser;
 
               dispatch(
@@ -54,6 +58,7 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
+              navigate("/browse")
             })
             .catch((error) => {
               setErrorMessage(error.message);
@@ -74,9 +79,9 @@ const Login = () => {
         password.current.value
       )
         .then((userCredential) => {
-          // Signed in
+
           const user = userCredential.user;
-          // console.log(user)
+          navigate("/browse")
           // ...
         })
         .catch((error) => {
