@@ -8,3 +8,12 @@ export const API_OPTIONS = {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NGZlNjVmZjhhNDRhZDBmYTBkYjE1ZGUwYTA1MDdhNCIsIm5iZiI6MTcyNjMwNDQwMS4xNzkwNzQsInN1YiI6IjY2ZTU0Y2ZlZmIzOTE0ZTI1NWZkNWFhZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.iuRqA2BHBPu_JvtcHrNJjMvH6N-8Y5HDxpaCBEIUsBE",
   },
 };
+export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500/";
+export const BG_URL =
+  "https://www.techhive.com/wp-content/uploads/2023/10/Netflix-Hintergrund.jpg?quality=50&strip=all";
+export const SUPPORTED_LANGUAGES = [
+  { identifier: "en", name: "English" },
+  { identifier: "hindi", name: "Hindi" },
+  { identifier: "spanish", name: "Spanish" },
+  { identifier: "gujarati", name: "Gujarati" },
+];

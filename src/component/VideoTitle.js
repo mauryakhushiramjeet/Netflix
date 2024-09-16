@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
 const VideoTitle = ({ title, overview }) => {
   return (
@@ -11,7 +11,8 @@ const VideoTitle = ({ title, overview }) => {
         <button className="bg-white text-black p-4 px-14  text-xl rounded-lg hover:bg-opacity-70">
           <FontAwesomeIcon icon={faPlay} className="mr-2" /> Play
         </button>
-        <button className="bg-gray-500 text-white mx-2 p-4 px-12  text-xl rounded-lg bg-opacity-50">ⓘ
+        <button className="bg-gray-500 text-white mx-2 p-4 px-12  text-xl rounded-lg bg-opacity-50">
+          <FontAwesomeIcon icon={faCircleInfo} />
           More Info
         </button>
       </div>
